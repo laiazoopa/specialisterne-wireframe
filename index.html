@@ -303,8 +303,10 @@
   .home-hero .text-slide .hbg{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:0}
   .home-hero .text-slide::after{content:"";position:absolute;inset:0;background:linear-gradient(100deg,rgba(0,31,73,.95),rgba(0,43,100,.62));z-index:1}
   .home-hero .text-slide .wrap{position:relative;z-index:2;width:100%;display:flex;flex-direction:column}
-  .home-hero .text-slide h1.tcase,.home-hero .text-slide .hero-lead{width:100%}
+  .home-hero .text-slide h1.tcase,.home-hero .text-slide h2.tcase,.home-hero .text-slide .hero-lead{width:100%}
   .home-hero .text-slide .hero-cta{margin-top:auto;padding-top:18px}
+  .home-hero .text-slide h2.tcase{color:#fff;font-size:clamp(1.9rem,4.2vw,3rem);line-height:1.15;font-weight:800;margin:0;letter-spacing:-.01em;max-width:620px}
+  .home-hero .fb-kicker{display:inline-block;color:#fff;background:rgba(255,255,255,.12);border:1px solid rgba(255,255,255,.5);font-size:.72rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;padding:.5em 1.1em;border-radius:999px;margin-bottom:20px}
   /* image slides (Forbes / Social Impact banners) &mdash; shown full-bleed */
   .home-hero .img-slide{cursor:pointer;text-decoration:none}
   .home-hero .img-slide img{display:block;width:100%;height:100%;object-fit:cover;object-position:center}
@@ -313,10 +315,10 @@
   .home-hero .social-slide .ss-grid{display:grid;grid-template-columns:1fr 1.12fr;height:100%}
   .home-hero .social-slide .ss-photo{background:url(assets/social-photo.jpg) center/cover;height:100%}
   .home-hero .social-slide .ss-panel{display:flex;flex-direction:column;justify-content:center;background:#fff;padding:0 clamp(28px,5vw,72px)}
-  .home-hero .social-slide .ss-title{color:var(--indigo);font-weight:800;line-height:.98;letter-spacing:-.01em;text-transform:uppercase;font-size:clamp(1.7rem,3.6vw,3.1rem)}
-  .home-hero .social-slide .ss-title .thin{font-weight:400}
-  .home-hero .social-slide .ss-title .yr{color:var(--amber)}
-  .home-hero .social-slide .ss-sub{color:var(--indigo);font-size:clamp(1rem,1.5vw,1.4rem);line-height:1.35;margin-top:20px;max-width:520px}
+  .home-hero .social-slide .ss-kicker{color:var(--teal-deep);font-weight:700;letter-spacing:.08em;text-transform:uppercase;font-size:.82rem;margin-bottom:14px}
+  .home-hero .social-slide .ss-head{color:var(--indigo);font-weight:800;line-height:1.12;letter-spacing:-.01em;font-size:clamp(1.5rem,2.7vw,2.3rem);margin:0;text-wrap:balance}
+  .home-hero .social-slide .ss-sub{color:var(--ink-soft);font-size:clamp(1rem,1.3vw,1.2rem);line-height:1.45;margin-top:16px;max-width:520px}
+  .home-hero .social-slide .ss-panel .btn{margin-top:24px;align-self:flex-start}
   @media(max-width:760px){.home-hero .social-slide .ss-grid{grid-template-columns:1fr}.home-hero .social-slide .ss-photo{display:none}}
   @keyframes heroFade{from{opacity:0}to{opacity:1}}
   .hero-dots{position:absolute;left:0;right:0;bottom:24px;z-index:6;display:flex;gap:9px;justify-content:center}
@@ -907,16 +909,26 @@
       <div class="hero-cta"><a class="btn" onclick="go('orgs')">Collaborate</a></div>
     </div>
     </div>
-    <a class="hero-slide img-slide" onclick="go('recognitions')" role="button" tabindex="0" aria-label="Forbes Accessibility 200 2026 &mdash; see our recognitions"><img src="assets/slider-forbes.jpg" alt="Forbes Accessibility 200 2026 &mdash; Specialisterne recognized for the second consecutive year"></a>
-    <a class="hero-slide social-slide" href="https://info.specialisterne.com/hubfs/GLOBAL%20DOCUMENTS/%5BEN%5D%20Specialisterne%202025%20Social%20Impact%20Report.pdf" target="_blank" rel="noopener noreferrer" aria-label="Social Impact Report 2025">
+    <div class="hero-slide text-slide forbes-slide">
+      <img class="hbg" src="assets/forbes-photo.jpg" alt="">
+      <div class="wrap">
+        <div class="fb-kicker">Forbes Accessibility 200 &middot; 2026</div>
+        <h2 class="tcase">Recognized among the world's<br>accessibility innovators.</h2>
+        <div class="hero-lead"><p><strong>Because inclusion is how the future gets built.</strong><br>For the second consecutive year, Forbes has named Specialisterne to the Accessibility 200, recognizing organizations driving innovation through accessibility.</p></div>
+        <div class="hero-cta"><a class="btn" onclick="go('recognitions')">Discover more</a></div>
+      </div>
+    </div>
+    <div class="hero-slide social-slide">
       <div class="ss-grid">
         <div class="ss-photo"></div>
         <div class="ss-panel">
-          <div class="ss-title"><span class="thin">Social</span><br>Impact Report<br><span class="yr">2025</span></div>
-          <p class="ss-sub">We transform society by creating pathways for neurodivergent people to access and thrive at work.</p>
+          <div class="ss-kicker">Social Impact Report 2025</div>
+          <h2 class="ss-head">Real impact isn't measured by intentions. It's measured by lives changed.</h2>
+          <p class="ss-sub">Our 2025 Social Impact Report shows how Specialisterne is advancing workplace inclusion and creating measurable pathways for neurodivergent people to thrive at work.</p>
+          <a class="btn" href="https://info.specialisterne.com/hubfs/GLOBAL%20DOCUMENTS/%5BEN%5D%20Specialisterne%202025%20Social%20Impact%20Report.pdf" target="_blank" rel="noopener noreferrer">Download the report</a>
         </div>
       </div>
-    </a>
+    </div>
     <div class="hero-dots">
       <span class="on" role="button" tabindex="0" aria-label="Show slide 1: Celebrating minds"></span>
       <span role="button" tabindex="0" aria-label="Show slide 2: Forbes Accessibility 200"></span>
