@@ -306,7 +306,14 @@
   .home-hero .text-slide h1.tcase,.home-hero .text-slide h2.tcase,.home-hero .text-slide .hero-lead{width:100%}
   .home-hero .text-slide .hero-cta{margin-top:auto;padding-top:18px}
   .home-hero .text-slide h2.tcase{color:#fff;font-size:clamp(1.9rem,4.2vw,3rem);line-height:1.15;font-weight:800;margin:0;letter-spacing:-.01em;max-width:620px}
-  .home-hero .fb-kicker{display:inline-block;color:#fff;background:rgba(255,255,255,.12);border:1px solid rgba(255,255,255,.5);font-size:.72rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;padding:.5em 1.1em;border-radius:999px;margin-bottom:20px}
+  .home-hero .fb-kicker{display:inline-block;color:#fff;background:rgba(255,255,255,.12);border:1px solid rgba(255,255,255,.5);font-size:.72rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;padding:.5em 1.1em;border-radius:999px;margin-bottom:18px;align-self:flex-start}
+  /* Forbes: full banner + text over the man (right side) */
+  .home-hero .forbes-slide .fb-text{margin-left:auto;width:min(50%,540px);display:flex;flex-direction:column;justify-content:center;height:100%}
+  .home-hero .forbes-slide h2.tcase{font-size:clamp(1.5rem,2.7vw,2.4rem);max-width:none}
+  .home-hero .forbes-slide .hero-cta{margin-top:22px;padding-top:0}
+  .home-hero .forbes-slide .hero-lead{max-width:none}
+  .home-hero .forbes-slide::after{background:linear-gradient(90deg,rgba(0,16,38,0) 36%,rgba(0,16,38,.5) 56%,rgba(0,16,38,.9) 100%)}
+  @media(max-width:760px){.home-hero .forbes-slide .fb-text{width:100%;margin:0}.home-hero .forbes-slide::after{background:linear-gradient(180deg,rgba(0,16,38,.55),rgba(0,16,38,.85))}}
   /* image slides (Forbes / Social Impact banners) &mdash; shown full-bleed */
   .home-hero .img-slide{cursor:pointer;text-decoration:none}
   .home-hero .img-slide img{display:block;width:100%;height:100%;object-fit:cover;object-position:center}
@@ -910,12 +917,14 @@
     </div>
     </div>
     <div class="hero-slide text-slide forbes-slide">
-      <img class="hbg" src="assets/forbes-photo.jpg" alt="">
+      <img class="hbg" src="assets/slider-forbes.jpg" alt="Forbes Accessibility 200 2026 — Specialisterne">
       <div class="wrap">
-        <div class="fb-kicker">Forbes Accessibility 200 &middot; 2026</div>
-        <h2 class="tcase">Recognized among the world's<br>accessibility innovators.</h2>
-        <div class="hero-lead"><p><strong>Because inclusion is how the future gets built.</strong><br>For the second consecutive year, Forbes has named Specialisterne to the Accessibility 200, recognizing organizations driving innovation through accessibility.</p></div>
-        <div class="hero-cta"><a class="btn" onclick="go('recognitions')">Discover more</a></div>
+        <div class="fb-text">
+          <div class="fb-kicker">Accessibility 200 &middot; 2026</div>
+          <h2 class="tcase">Recognized among the world's accessibility innovators.</h2>
+          <div class="hero-lead"><p><strong>Because inclusion is how the future gets built.</strong><br>For the second consecutive year, Forbes has named Specialisterne to the Accessibility 200, recognizing organizations driving innovation through accessibility.</p></div>
+          <div class="hero-cta"><a class="btn" onclick="go('recognitions')">Discover more</a></div>
+        </div>
       </div>
     </div>
     <div class="hero-slide social-slide">
