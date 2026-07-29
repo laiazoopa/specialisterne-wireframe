@@ -363,10 +363,10 @@
   .intro-box{background:var(--indigo);color:#fff;border-radius:18px;padding:56px 44px;display:flex;align-items:center}
   .intro-box p{font-weight:500;font-size:1.08rem;margin:0;line-height:1.6}
   .video-box{background:#d8d8d8;border-radius:18px;min-height:320px;position:relative;overflow:hidden}
-  .video-box:has(iframe){min-height:0;aspect-ratio:16/9;align-self:center;background:#000}
+  .video-box:has(iframe),.video-box:has(video){min-height:0;aspect-ratio:16/9;align-self:center;background:#000}
   .video-box::after{content:"►";position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:70px;height:70px;
     border-radius:50%;border:2px solid #5d5d5d;color:#5d5d5d;display:flex;align-items:center;justify-content:center;font-size:1.3rem}
-  .video-box:has(iframe)::after{display:none}
+  .video-box:has(iframe)::after,.video-box:has(video)::after{display:none}
   /* OUR SERVICES card */
   .services-card{border:1px solid #DDE1EE;border-radius:26px;background:#F3F4FB;padding:48px;box-shadow:0 8px 30px rgba(0,43,100,.05)}
   .services-top{display:grid;grid-template-columns:1fr 1.35fr;gap:30px;align-items:stretch}
@@ -967,7 +967,7 @@
   <section class="tight">
     <div class="wrap"><div class="intro-row">
       <div class="intro-box"><p>Since 2004, we have led a pioneering movement demonstrating how neurodiversity creates value, supporting hundreds&nbsp; of organizations and empowering thousands of autistic professionals worldwide.</p></div>
-      <div class="video-box"><iframe src="https://drive.google.com/file/d/1FRzEh2e_jn_9Jf70nGIJcbounT7i_Bbi/preview" title="Specialisterne corporate video" allow="autoplay; fullscreen" allowfullscreen loading="lazy" style="position:absolute;inset:0;width:100%;height:100%;border:0;border-radius:inherit"></iframe></div>
+      <div class="video-box"><video src="assets/specialisterne-video.mp4" controls preload="metadata" playsinline title="Specialisterne corporate video" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;border:0;border-radius:inherit"></video></div>
     </div></div>
   </section>
 
@@ -1763,7 +1763,7 @@
 
   <section class="tight"><div class="wrap"><div class="story-grid">
     <h2>THE STORY OF<br>SPECIALISTERNE</h2>
-    <div class="video-box"><iframe src="https://drive.google.com/file/d/1FRzEh2e_jn_9Jf70nGIJcbounT7i_Bbi/preview" title="Specialisterne corporate video" allow="autoplay; fullscreen" allowfullscreen loading="lazy" style="position:absolute;inset:0;width:100%;height:100%;border:0;border-radius:inherit"></iframe></div>
+    <div class="video-box"><video src="assets/specialisterne-video.mp4" controls preload="metadata" playsinline title="Specialisterne corporate video" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;border:0;border-radius:inherit"></video></div>
   </div></div></section>
 
   <section class="tight"><div class="wrap"><div class="grey-sec"><div class="g2">
